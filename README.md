@@ -5,7 +5,7 @@
 <br>
 <p align="center">
     <em>
-      A centralized coordination service designed to seamlessly integrate, <br> manage, scale and automate workflows across the Cumplo symphony
+      A centralized coordination service designed to seamlessly integrate,  <br> manage, scale and automate workflows across backend services
     </em>
 </p>
 <br>
