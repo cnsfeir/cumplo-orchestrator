@@ -1,3 +1,6 @@
+include .env
+export
+
 PYTHON_VERSION := $(shell python -c "print(open('.python-version').read().strip())")
 INSTALLED_VERSION := $(shell python -c "import sys; print(f'{sys.version_info.major}.{sys.version_info.minor}')")
 
@@ -7,7 +10,8 @@ INSTALLED_VERSION := $(shell python -c "import sys; print(f'{sys.version_info.ma
   setup_venv \
   start \
   build \
-  down
+  down \
+  login
 
 # Checks if the installed Python version matches the required version
 check_python_version:
@@ -42,3 +46,8 @@ start:
 
 down:
 	@docker-compose down
+
+# Activates the project configuration and logs in to gcloud
+login:
+	@gcloud config configurations activate $(PROJECT_ID)
+	@gcloud auth application-default login
