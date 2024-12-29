@@ -4,7 +4,7 @@ from http import HTTPStatus
 from logging import getLogger
 
 from cumplo_common.database import firestore
-from cumplo_common.integrations.cloud_pubsub import publish_event
+from cumplo_common.integrations.cloud_pubsub import CloudPubSub
 from cumplo_common.models.funding_request import FundingRequest
 from fastapi import APIRouter, Request
 
@@ -28,4 +28,4 @@ def _filter_funding_requests(_request: Request, payload: list[FundingRequest]) -
 
         logger.info(f"Emiting event for user {user.id} about available funding requests")
         content = [funding_request.json() for funding_request in payload]
-        publish_event(content, USER_FUNDING_REQUESTS_TOPIC, id_user=str(user.id))
+        CloudPubSub.publish(content, USER_FUNDING_REQUESTS_TOPIC, id_user=str(user.id))
