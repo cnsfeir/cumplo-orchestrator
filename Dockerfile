@@ -1,5 +1,5 @@
-# Base container with Python 3.11 official image
-FROM python:3.11-bullseye AS base
+# Base container with Python 3.12 official image
+FROM python:3.12-bullseye AS base
 
 # Set up environment variables
 ENV LANG=C.UTF-8 \
@@ -77,4 +77,4 @@ ENTRYPOINT ["/usr/bin/entrypoint.sh"]
 COPY . ./
 
 # Run the app
-CMD exec uvicorn --host 0.0.0.0 --port 8080 cumplo_orchestrator.main:app
+CMD exec uvicorn --workers 8 --host 0.0.0.0 --port 8080 cumplo_orchestrator.main:app

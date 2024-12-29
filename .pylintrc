@@ -1,6 +1,6 @@
 [MAIN]
 
-py-version=3.11
+py-version=3.12
 init-hook='import sys; sys.path.append("./")'
 
 disable=
