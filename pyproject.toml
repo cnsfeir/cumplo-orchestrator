@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cumplo-orchestrator"
-version = "0.1.3"
+version = "0.1.4"
 description = "A centralized coordination service designed to seamlessly integrate, manage, scale and automate workflows across backend services"
 authors = ["Cristobal Sfeir <cnsfeir@uc.cl>"]
 packages = [{ include = "cumplo_orchestrator" }]
@@ -11,13 +11,14 @@ optional = true
 [tool.poetry.group.rest-api.dependencies]
 fastapi = "^0.109.1"
 uvicorn = "^0.23.1"
+gunicorn = "^21.2.0"
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
 pydantic = "^2.1.1"
 python-dotenv = "^1.0.0"
 google-cloud-logging = "^3.5.0"
-cumplo-common = { version = "^1.2.1", source = "cumplo-pypi" }
+cumplo-common = { version = "^1.3.2", source = "cumplo-pypi" }
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.17.5"
