@@ -1,6 +1,4 @@
-"""
-A centralized coordination service designed to seamlessly integrate,
-manage, scale and automate workflows across backend services
-"""
+"""A centralized coordination service designed to seamlessly integrate, manage, scale and automate workflows across
+backend services."""
 
-__version__ = "0.1.4"
+__version__ = "0.2.0"
