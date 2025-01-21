@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "cumplo-orchestrator"
-version = "0.2.1"
+version = "0.2.2"
 description = "A centralized coordination service designed to seamlessly integrate, manage, scale and automate workflows across backend services"
 authors = ["Cristobal Sfeir <cnsfeir@uc.cl>"]
 packages = [{ include = "cumplo_orchestrator" }]
