@@ -7,8 +7,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile.development
-      args: 
+      args:
         - CUMPLO_PYPI_BASE64_KEY
     volumes:
       - ./cumplo_orchestrator:/app/cumplo_orchestrator
-      - /app/.venv
