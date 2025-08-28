@@ -40,3 +40,8 @@ async def _validation_error_handler(_request: Request, error: ValidationError) -
 
 
 app.include_router(funding_requests.router)
+
+
+@app.post(path="/wake-up", status_code=HTTPStatus.NO_CONTENT)
+def _wake_up() -> None:
+    """Wake up endpoint."""
